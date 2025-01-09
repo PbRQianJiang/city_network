@@ -5,6 +5,7 @@
 #include <vector>
 #include <utility>
 
+//主要做的事情添加边的数据结构，构造MST
 // 边结构体：表示图中的一条边
 struct Edge {
     int from;   // 起始顶点
@@ -24,6 +25,7 @@ struct Edge {
 class MST {
 public:
     // 基本Prim算法实现
+    //键对分别是权值和 和 边（strcut）
     static std::pair<int, std::vector<Edge>> prim(const Graph& graph);
 
     // 使用优先队列优化的Prim算法

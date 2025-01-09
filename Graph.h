@@ -1,10 +1,12 @@
-#ifndef GRAPH_H
-#define GRAPH_H
+#ifndef GRAPH_H//如果未定义GRAPH_H
+#define GRAPH_H//则定义GRAPH_H
+//防止重复定义，造成编译错误，比如有两个类的情况
 
 #include <vector>
 #include <string>
 
 // 图类：用于表示城市交通网络
+//主要做的事情就是把内容存到矩阵里
 class Graph {
 private:
     int vertices;                                  // 顶点（城市）数量
@@ -23,6 +25,8 @@ public:
 
     // 获取城市名称
     std::string getCityName(int vertex) const;
+    //const修饰成员函数，表示该函数不会修改类的成员变量
+    //const对象只能调用成员函数
 
     // 获取顶点数量
     int getVertices() const;

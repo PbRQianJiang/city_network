@@ -3,10 +3,11 @@
 #include <fstream>
 #include <limits>
 #include <windows.h>
-#include <locale>
+
+using namespace std;
 
 Graph::Graph(int v) : vertices(v) {
-    adjacencyMatrix.resize(v, std::vector<int>(v, 0));
+    adjacencyMatrix.resize(v, vector<int>(v, 0));
     cityNames.resize(v);
 }
 
@@ -44,32 +45,32 @@ int Graph::getWeight(int from, int to) const {
 void Graph::loadFromKeyboard() {
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
+
+    cout << "请输入城市数量：";
+    cin >> vertices;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     
-    std::cout << "请输入城市数量：";
-    std::cin >> vertices;
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    
-    adjacencyMatrix.resize(vertices, std::vector<int>(vertices, 0));
+    adjacencyMatrix.resize(vertices, vector<int>(vertices, 0));
     cityNames.resize(vertices);
 
-    std::cout << "请输入各个城市的名称：\n";
+    cout << "请输入各个城市的名称：\n";
     for (int i = 0; i < vertices; i++) {
-        std::cout << "城市 " << i << " 的名称: ";
+        cout << "城市 " << i << " 的名称: ";
         char name[256];
-        std::cin.getline(name, 256);
-        cityNames[i] = std::string(name);
+        cin.getline(name, 256);
+        cityNames[i] = string(name);
     }
 
-    std::cout << "请输入城市间的连接和权重（输入-1 -1 -1结束）：\n";
+    cout << "请输入城市间的连接和权重（输入-1 -1 -1结束）：\n";
     while (true) {
         int from, to, weight;
-        std::cout << "输入起始城市编号、目标城市编号和权重: ";
-        std::cin >> from >> to >> weight;
+        cout << "输入起始城市编号、目标城市编号和权重: ";
+        cin >> from >> to >> weight;
         
         if (from == -1 && to == -1 && weight == -1) break;
         
         if (from < 0 || from >= vertices || to < 0 || to >= vertices) {
-            std::cout << "错误：城市编号必须在0到" << (vertices-1) << "之间！\n";
+            cout << "错误：城市编号必须在0到" << (vertices-1) << "之间！\n";
             continue;
         }
         
@@ -79,12 +80,13 @@ void Graph::loadFromKeyboard() {
 
 void Graph::loadFromFile(const std::string& filename) {
     std::ifstream file(filename);
+    //ifstream是类，file是对象
     if (!file.is_open()) {
         std::cout << "无法打开文件！" << std::endl;
         return;
     }
 
-    file >> vertices;
+    file >> vertices;//读第一个数字，表示城市数量
     adjacencyMatrix.resize(vertices, std::vector<int>(vertices, 0));
     cityNames.resize(vertices);
 
