@@ -24,21 +24,21 @@
 
 ### 功能模块图
 
-![功能模块图](path/to/your/module_diagram.png)
+![功能模块图](1.png)
 
 ### 流程图
 
-![流程图](path/to/your/flowchart.png)
+![流程图](2.png)
 
 ## 用户页面
 
 ### 菜单
 
-![功能模块图](path/to/your/module_diagram.png)
+![功能模块图](3.png)
 
 ## 算法性能测试
 
-![功能模块图](path/to/your/module_diagram.png)
+![功能模块图](4.png)
 
 
 ## 输入与输出规范
@@ -130,7 +130,7 @@ Prim算法结果：
 
 以下为四种算法在不同图上的性能对比图：
 
-![性能测试图](path/to/your/performance_chart.png)
+![性能测试图](5.png)
 
 ## 未来展望
 
