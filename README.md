@@ -22,14 +22,6 @@
 
 ## 系统架构
 
-## 用户页面
-
-![功能模块图](path/to/your/module_diagram.png)
-
-## 算法性能测试
-
-![功能模块图](path/to/your/module_diagram.png)
-
 ### 功能模块图
 
 ![功能模块图](path/to/your/module_diagram.png)
@@ -37,6 +29,17 @@
 ### 流程图
 
 ![流程图](path/to/your/flowchart.png)
+
+## 用户页面
+
+### 菜单
+
+![功能模块图](path/to/your/module_diagram.png)
+
+## 算法性能测试
+
+![功能模块图](path/to/your/module_diagram.png)
+
 
 ## 输入与输出规范
 
