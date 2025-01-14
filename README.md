@@ -22,6 +22,14 @@
 
 ## 系统架构
 
+## 用户页面
+
+![功能模块图](path/to/your/module_diagram.png)
+
+## 算法性能测试
+
+![功能模块图](path/to/your/module_diagram.png)
+
 ### 功能模块图
 
 ![功能模块图](path/to/your/module_diagram.png)
